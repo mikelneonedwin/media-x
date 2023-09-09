@@ -7,7 +7,19 @@
     <link rel="stylesheet" href="./css/google-font.css">
     <link rel="stylesheet" href="style.css">
     <script src="./js/vue.prod.js"></script>
-    <script src="app.js"></script>
+    <script>
+        const { createApp, ref } = Vue;
+        window.addEventListener('DOMContentLoaded', () => {
+            createApp({
+                setup(){
+                    const showNav = ref(false);
+
+                    
+                    return { showNav }
+                }
+            }).mount('body');
+        })
+    </script>
 </head>
 <body class="bg-bg text-white">
     <nav @click="showNav = false" class="fixed lg:bg-bg overflow-y-auto z-10 lg:px-2 lg:w-[15%] overflow-x-hidden top-0 bottom-0 left-0 lg:max-w-full grid lg:flex grid-cols-2 flex-col w-full" :class="{'max-w-0': !showNav, 'max-w-full': showNav}">

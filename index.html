@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media-X</title>
+    <link rel="stylesheet" href="./css/google-font.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/vue.prod.js"></script>
+    <script src="app.js"></script>
+</head>
+<body class="bg-bg text-white">
+    <nav @click="showNav = false" class="fixed lg:bg-bg overflow-y-auto z-10 lg:px-2 lg:w-[15%] overflow-x-hidden top-0 bottom-0 left-0 lg:max-w-full grid lg:flex grid-cols-2 flex-col w-full" :class="{'max-w-0': !showNav, 'max-w-full': showNav}">
+        <div class="pt-6 bg-bg w-full flex flex-col gap-6">
+            <button class="mx-auto hidden lg:inline-block material-icons p-1 rotate-90 rounded-md bg-black">search</button>
+            <div class="flex flex-col items-center justify-center">
+                <i class="material-icons text-8xl">account_circle</i>
+                <b>Taz Noten</b>
+                <small>Lorem, ipsum.</small>
+            </div>
+            <div class="nav-tab">
+                <a href="#" class="active"><i class="material-icons">home</i>Home</a>
+                <a href="#"><i class="material-icons">grid_on</i>Browse</a>
+                <a href="#"><i class="material-icons">queue_music</i>Playlist</a>
+                <a href="#"><i class="material-icons">campaign</i>Live</a>
+                <a href="#"><i class="material-icons">groups</i>Friends</a>
+            </div>
+            <div class="nav-tab">
+                <p class="tracking-wide font-semibold text-gray-100 text-sm">MY LIBRARY</p>
+                <a href="#"><i class="material-icons">access_time</i>Recent</a>
+                <a href="#"><i class="material-icons">download</i>Saved</a>
+                <a href="#"><i class="material-icons">album</i>Album</a>
+                <a href="#"><i class="material-icons">perm_identity</i>Artists</a>
+            </div>
+        </div>
+        <div class="bg-black opacity-70"></div>
+    </nav>
+    <div class="lg:w-[85%] px-6 box-border ml-auto pt-4 flex flex-col gap-4">
+        <nav class="grid grid-cols-2 items-center">
+            <div class="flex gap-6 items-center">
+                <a href="#" class="active">Trends</a>
+                <a href="#">Charts</a>
+                <a href="#">News</a>
+            </div>
+            <div class="flex items-center gap-3 justify-end">
+                <i class="material-icons">notifications</i>
+                <i class="material-icons">settings</i>
+                <i class="material-icons -rotate-180">logout</i>
+                <i class="material-icons rotate-90 lg:hidden">search</i>
+                <i @click="showNav = true" class="material-icons lg:hidden">menu</i>
+            </div>
+        </nav>
+        <div class="lg:grid lg:grid-cols-3 flex flex-col gap-8">
+            <div class="lg:col-span-2 flex flex-col gap-4">
+                <div class="set">
+                    <p>Hottest releases this week</p>
+                    <div>
+                        <div>
+                            <img src="./img/art.jpg">
+                            <p>
+                                <b>Pop Smoke</b>
+                                <span>Dior</span>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./img/all my life.jpg">
+                            <p>
+                                <b>Lil Durk</b>
+                                <span>All My Life</span>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./img/alone.jpg">
+                            <p>
+                                <b>Trevor Daniel</b>
+                                <span>Alone</span>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./img/apollo.jpg">
+                            <p>
+                                <b>Victony</b>
+                                <span>Apollo</span>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./img/hot girl bummer.jpg">
+                            <p>
+                                <b>blackbear</b>
+                                <span>Hot Girl bummer</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="set">
+                    <p>Most Popular</p>
+                    <div>
+                        <div>
+                            <img src="./img/fvck love.jpg">
+                            <p>
+                                <b>The Kid LAROI</b>
+                                <span>Wrong</span>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./img/joromi.jpg">
+                            <p>
+                                <b>Simi</b>
+                                <span>Joromi</span>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./img/ole.jpg">
+                            <p>
+                                <b>Qing Madi</b>
+                                <span>Ole</span>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./img/out on bail.jpg">
+                            <p>
+                                <b>YG</b>
+                                <span>Out On Bail</span>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./img/other side of america.jpg">
+                            <p>
+                                <b>Meek Mill</b>
+                                <span>Otherside Of America</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="set">
+                    <p>For You</p>
+                    <div>
+                        <div>
+                            <img src="./img/ole.jpg">
+                            <p>
+                                <b>Qing Madi</b>
+                                <span>Ole</span>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./img/wait.jpg">
+                            <p>
+                                <b>Offshore369</b>
+                                <span>Wait</span>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./img/wandered.jpg">
+                            <p>
+                                <b>Juice WRLD, Justin Beiber</b>
+                                <span>Wandered To LA</span>
+                            </p>
+                        </div>
+                        <div>
+                            <img src="./img/prolly heard.jpg">
+                            <p>
+                                <b>DaBaby</b>
+                                <span>Prolly Heard</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:flex hidden flex-col gap-4 h-full">
+                <div class="grid grid-cols-2">
+                    <h2 class="font-semibold">Now Playing</h2>
+                    <div class="text-right">
+                        <i class="material-icons">share</i>
+                    </div>
+                </div>
+                <div class="flex items-center gap-0.5 flex-col justify-center">
+                    <img src="./img/sabi.jpg" class="rounded-xl h-60">
+                    <b>Ayra Starr</b>
+                    <span class="text-sm">Away</span>
+                </div>
+                <div class="flex items-center -translate-y-3 justify-evenly px-8">
+                    <i class="material-icons">shuffle</i>
+                    <i class="material-icons">skip_previous</i>
+                    <i class="material-icons">play_arrow</i>
+                    <i class="material-icons">skip_next</i>
+                    <i class="material-icons">loop</i>
+                </div>
+                <div>
+                    <p class="font-semibold">Next Songs</p>
+                    <div class="next mt-4 grid gap-3 grid-cols-1">
+                        <div>
+                            <img src="./img/positions.jpg">
+                            <div>
+                                <b>Positions</b>
+                                <span>Ariana Grande</span>
+                            </div>
+                            <span>2:52</span>
+                        </div>
+                        <div>
+                            <img src="./img/start wit me.jpg">
+                            <div>
+                                <b>Roddy Ricch</b>
+                                <span>Start Wit Me</span>
+                            </div>
+                            <span>2:26</span>
+                        </div>
+                        <div>
+                            <img src="./img/unholy.jpg">
+                            <div>
+                                <b>Unholy</b>
+                                <span>Sam Smith, Kim Petras</span>
+                            </div>
+                            <span>2:36</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
